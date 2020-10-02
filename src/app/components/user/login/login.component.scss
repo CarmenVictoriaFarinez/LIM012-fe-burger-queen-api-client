@@ -3,6 +3,19 @@
   height: $alto;
 }
 
+@mixin input($ancho, $alto) {
+  width: $ancho;
+  height: $alto;
+}
+
+.inputLoginForm {
+  @include input(60%, 62px);
+}
+
+.loginForm-button {
+  @include input(35%, 42px);
+}
+
 .logo {
   @include container(362px, 130px);
   display: flex;
@@ -14,62 +27,77 @@
   font-family: 'Bangers', cursive;
   font-size: 100%;
   margin-top: 20%;
+  .warning-validator{
+    color: red;
+    margin-top: 2%;
+    margin-left: 40%;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+  }
 }
 
-@mixin input($ancho, $alto) {
-  width: $ancho;
-  height: $alto;
-}
-
-.inputLoginForm {
-  @include input(60%, 62px);
-}
 
 .inputLoginForm {
     display: flex;
+    justify-content: center;
+    text-align: center;
     background: #F7B610;
     border: 10px solid #F7B610;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
-    margin-top: 5%;
+    margin-top: 4%;
     margin-left: 20%;
+    margin-bottom: 3%;
     font-family: 'Bangers', cursive;
-    font-size: 28px;
+    font-size: 20px;
     text-align: center;
     letter-spacing: 2px;
     word-spacing: 4px;
 }
 
-
-.loginForm-button {
-  @include input(30%, 80px);
-}
-
 .loginForm-button {
     display: flex;
-    padding-top: 4%;
-    padding-left: 5%;
+    justify-content: center;
+    text-align: center;
     background: #F7B610;
     border: 10px solid #F7B610;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
-  
     margin-left: 35%;
     font-family: 'Bangers', cursive;
-    font-size: 28px;
+    font-size: 18px;
     text-align: center;
     letter-spacing: 2px;
     word-spacing: 4px;
 }
 
-.warning-validator{
-  color: red;
-  margin-top: 2%;
-  margin-left: 40%;
-  letter-spacing: 2px;
-  word-spacing: 4px;
+
+
+@keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}}
+.imgr{
+    margin-left: 75%;
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
 }
+.imgr2 {
+  margin-left: 18%;
+-webkit-animation: 3s rotate linear infinite;
+  animation: 3s rotate linear infinite;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.animate__animated animate__wobble {
+  --animate-duration: 8000s;
+}
+
+
 
 $layout-breakpoint-tablet: 400px;
 // aqui todo lo modificado afecta la vista tablet
@@ -87,14 +115,14 @@ $layout-breakpoint-tablet: 400px;
 
   .inputLoginForm {
     margin-left: 33%;
-    margin-top: 2%;
+    margin-top: 1%;
   }
   .inputLoginForm {
     @include input(40%, 62px);
   }
 
   .loginForm-button {
-    @include input(15%, 62px);
+    @include input(13%, 62px);
   }
 
   .loginForm-button {

@@ -2,14 +2,25 @@
   <img alt="Angular Logo" class="logo" src="https://user-images.githubusercontent.com/60799456/92834412-9e55e380-f39f-11ea-985b-6f5a7233d081.png"/>
   </section>
 
+  <section class="section-animation">
+    <img alt="" class="imgr" src="https://user-images.githubusercontent.com/60799456/94722848-7f52cd80-031d-11eb-87ab-ebb182aefe14.png">
+  </section>
+  
+
     <form class="loginForm">
       <div class="warning-validator" *ngIf="isError">
         <strong> ⚠️ Por favor ingrese correctamente todos los campos </strong>
       </div>
       
-        <input class= "inputLoginForm" type="email" [(ngModel)]="email" name="email" placeholder="Ingresar Email"required="required"/>
-        <!--<span class="iconify" data-inline="false" data-icon="bx:bx-user" style="color: #071685; margin-left:38%; font-size: 45px;"></span> -->
+       <input class= "inputLoginForm" type="email" [(ngModel)]="email" name="email" placeholder="Ingresar Email"required="required"/>
+       <!--<span class="iconify" data-inline="false" data-icon="bx:bx-user" style="color: #071685; margin-left:38%; font-size: 45px;"></span> -->
         <input class= "inputLoginForm" type="password" [(ngModel)]="password" name="password" placeholder="Ingresar Password" required="required"/>
         <!--<span class="iconify" data-inline="false" data-icon="ri:lock-password-line" style="color: #071685; margin-left:38%; font-size: 45px;"></span> -->
         <button class= "loginForm-button" type="submit" (click)="login()">Ingresar</button>
       </form>
+
+      <section class="section-animation">
+        <img alt="" class="imgr2" src="https://user-images.githubusercontent.com/60799456/94722848-7f52cd80-031d-11eb-87ab-ebb182aefe14.png">
+      </section>
+
+      
